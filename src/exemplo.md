@@ -195,7 +195,7 @@ Exercícios
 ---
 
 ??? Exercício 1
-Dado o vetor a seguir, qual seria a saída do terminal desse vetor corrigido?
+Dado o vetor a seguir, qual seria a saída do terminal a cada iteração desse vetor corrigido?
 
 vetor = `md {12, 45, 3, 35, 86, 22}`
 ::: Gabarito
@@ -208,7 +208,7 @@ vetor = `md {12, 45, 3, 35, 86, 22}`
 ???
 
 ??? Exercício 2
-Dado o vetor a seguir, qual seria a saída do terminal desse vetor corrigido?
+Dado o vetor a seguir, qual seria a saída do terminal a cada iteração desse vetor corrigido?
 
 vetor = `md {46, 22, 1, 75, 35, 85, 64, 56, 12, 5, 97, 42}`
 ::: Gabarito
@@ -220,6 +220,44 @@ vetor = `md {46, 22, 1, 75, 35, 85, 64, 56, 12, 5, 97, 42}`
 ```
 :::
 ???
+
+??? Exercício 3
+Resolva o vetor a seguir usando o Insertion Sort. Qual seria a saída ao final de cada iteração do loop externo?
+
+vetor = `md {35, 32, 40, 8, 12, 18}`
+::: Gabarito
+```
+{32, 35, 40, 8, 12, 18}
+{32, 35, 40, 8, 12, 18}
+{8, 32, 35, 40, 12, 18}
+{8, 12, 32, 35, 40, 18}
+{8, 12, 18, 32, 35, 40}
+```
+:::
+???
+
+??? Exercício 4
+Baseado no mesmo vetor do exercício anterior, qual seria o valor da variável `md temp` em cada iteração do loop interno?
+
+vetor = `md {35, 32, 40, 8, 12, 18}`
+::: Gabarito
+```
+1ª iteração:
+8
+12
+18
+
+2ª iteração:
+0
+0
+
+3ª iteração:
+32
+```
+:::
+???
+
+Viu como o Shell Sort é muito mais eficiente que o Insertion Sort?
 
 Conclusão
 ---

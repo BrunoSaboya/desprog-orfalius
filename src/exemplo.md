@@ -75,15 +75,75 @@ pularem um numero maior de casas em apenas uma iteração do loop interno.
 
 ???
 
-
-
 Com essa solução de "pular"/"gap", podemos apresentar o Shell Sort que justamente se apropria dessa ideia
 e executa com maestria. O algoritmo pega to tamanho do vetor passado, e apartir dele esse *temp* é criado
 que será utilizado para trocar os elementos que estejam distantes.
 
-:shell
 
-Para facilitar mais o entendimento de como funciona o Shell Sort, vamos implementar o 
+??? Checkpoint
+
+Vamos entender como que o Shell Sort funciona de maneira simplificada. Antes, uma breve 
+explicação sobre o gap, ele é um parametro que é deduzido apartir do tamanho do vetor
+inicial, existem diversas maneiras de escolher. Para o nosso caso será apenas $N/2$ e $N/4$ e por fim $N/8$.
+
+:shell_2
+
+Anote como que seriam os vetores nesse momento da iteração do algoritmo com esse gap.
+
+::: Gabarito
+
+O vetor ficaria da seguinte maneira:
+
+:shell_3
+
+1°
+`md {5, 3, 9, 4}`
+
+2°
+`md {6, 1, 8, 7}`
+
+
+???
+
+Então agora é com você, vamos ver ser você realmente entendeu como funciona essa separação
+e organização que o Shell Sort proporciona.
+
+??? Checkpoint
+
+Com o mesmo vetor inicial, escolha um outro valor de gap, e escreva como que ficariam os vetores
+delimitados.
+
+::: Gabarito
+
+Para apenas fins explicativos e facilitar, esses seriam os vetores caso o gap fosse igual
+a 4.
+
+:shell_4
+
+1°
+`md {9, 5}`
+
+2°
+`md {8, 6}`
+
+3°
+`md {3, 4}`
+
+4°
+`md {7, 1}`
+
+Qualquer outro valor de gap que não seja igual a 1, proporcionaria mais de um vetor e dessa forma o Shell Sort entra em ação.
+
+???
+
+
+Quando chegarmos a um $Gap = 1$, o que aconteceria com o vetor ou com o algoritmo? Isso
+mesmo, seria apenas uma aplicação de um Insertion Sort básico em um vetor que já está
+praticamente inteiro ordenado e arrumado dessa forma facilitando e exigindo poucas
+etapas dele para que o vetor esteja completamente ordenado.
+
+
+<!-- Para facilitar mais o entendimento de como funciona o Shell Sort, vamos implementar o 
 nosso algoritmo no python.
 
 ``` py
@@ -92,17 +152,13 @@ def shellSort(array, size)
     for each interval "i" in array
         sort all the elements at interval "i"
     end shellSort
-```
+``` -->
 
-O Shellsort é uma otimização do insertion sort que permite a troca de 
-itens que estão muito distantes. A ideia é organizar a lista de elementos de forma que,
-a partir de qualquer lugar e pegando qualquer enésimo número, produza uma lista ordenada.
-Utilizamos de um numero que serve como índice para alternarmos os itens da lista, esse
-índice normalmente é o tamanho da lista passada dividada em 2 (N/2), então por 4 (N/4), por 8 (N/8), até que o valor da divisão 
-seja igual a 1 e ocorra um insertion sort normal.
 
-Repare na animação abaixo como são criado os `md pares` de elementos conforme o `md temp` dice que depende do tamanho da lista
+Repare na animação abaixo como são criado os `md pares` de elementos conforme o `md temp` que depende do tamanho da lista
 e como eles são trocados caso o elemento da esquerda seja maior que o elemento da direita do parzinho.
+
+:shell
 
 Aplicações
 ---

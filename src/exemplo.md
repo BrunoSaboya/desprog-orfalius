@@ -224,5 +224,5 @@ vetor = `md {46, 22, 1, 75, 35, 85, 64, 56, 12, 5, 97, 42}`
 Conclusão
 ---
 
-Como podemos ver nos exercícios feitos, o Shell Sort é um algorítmo excelente para quando os números pequenos estão muito
-distantes de seu local final assim como poucas iterações tiveram que ser feitas para que o vetor ficasse arrumado.
+Como podemos ver nos exercícios feitos, o Shell Sort é um algorítmo excelente para quando os números pequenos estão muito distantes de seu local final e com poucas iterações
+o vetor ficou arrumado e em ordem.
